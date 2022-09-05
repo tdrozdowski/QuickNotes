@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE6ED98C28C3D67F002F8995 /* QuickNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE6ED98A28C3D67F002F8995 /* QuickNotes.xcdatamodeld */; };
+		DE6ED98E28C3DBE9002F8995 /* QuickNote+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6ED98D28C3DBE9002F8995 /* QuickNote+CoreDataClass.swift */; };
+		DE6ED99028C3DD74002F8995 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6ED98F28C3DD74002F8995 /* PersistenceController.swift */; };
+		DEB988C928C445A000776A47 /* QuickNoteEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB988C828C445A000776A47 /* QuickNoteEditor.swift */; };
 		DEE46BA128C326320006987D /* QuickNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE46BA028C326320006987D /* QuickNotesApp.swift */; };
 		DEE46BA328C326320006987D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE46BA228C326320006987D /* ContentView.swift */; };
 		DEE46BA528C326330006987D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE46BA428C326330006987D /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE6ED98B28C3D67F002F8995 /* QuickNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuickNotes.xcdatamodel; sourceTree = "<group>"; };
+		DE6ED98D28C3DBE9002F8995 /* QuickNote+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickNote+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DE6ED98F28C3DD74002F8995 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		DEB988C828C445A000776A47 /* QuickNoteEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNoteEditor.swift; sourceTree = "<group>"; };
 		DEE46B9D28C326320006987D /* QuickNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE46BA028C326320006987D /* QuickNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNotesApp.swift; sourceTree = "<group>"; };
 		DEE46BA228C326320006987D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +44,7 @@
 		DEE46B9428C326320006987D = {
 			isa = PBXGroup;
 			children = (
+				DE6ED98A28C3D67F002F8995 /* QuickNotes.xcdatamodeld */,
 				DEE46B9F28C326320006987D /* QuickNotes */,
 				DEE46B9E28C326320006987D /* Products */,
 			);
@@ -52,8 +61,11 @@
 		DEE46B9F28C326320006987D /* QuickNotes */ = {
 			isa = PBXGroup;
 			children = (
-				DEE46BA028C326320006987D /* QuickNotesApp.swift */,
 				DEE46BA228C326320006987D /* ContentView.swift */,
+				DE6ED98F28C3DD74002F8995 /* PersistenceController.swift */,
+				DE6ED98D28C3DBE9002F8995 /* QuickNote+CoreDataClass.swift */,
+				DEE46BA028C326320006987D /* QuickNotesApp.swift */,
+				DEB988C828C445A000776A47 /* QuickNoteEditor.swift */,
 				DEE46BA428C326330006987D /* Assets.xcassets */,
 				DEE46BA928C326330006987D /* QuickNotes.entitlements */,
 				DEE46BA628C326330006987D /* Preview Content */,
@@ -139,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB988C928C445A000776A47 /* QuickNoteEditor.swift in Sources */,
 				DEE46BA328C326320006987D /* ContentView.swift in Sources */,
+				DE6ED98C28C3D67F002F8995 /* QuickNotes.xcdatamodeld in Sources */,
 				DEE46BA128C326320006987D /* QuickNotesApp.swift in Sources */,
+				DE6ED98E28C3DBE9002F8995 /* QuickNote+CoreDataClass.swift in Sources */,
+				DE6ED99028C3DD74002F8995 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +290,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickNotes;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.xymox.QuickNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,11 +320,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickNotes;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.xymox.QuickNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,6 +358,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DE6ED98A28C3D67F002F8995 /* QuickNotes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DE6ED98B28C3D67F002F8995 /* QuickNotes.xcdatamodel */,
+			);
+			currentVersion = DE6ED98B28C3D67F002F8995 /* QuickNotes.xcdatamodel */;
+			path = QuickNotes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DEE46B9528C326320006987D /* Project object */;
 }
